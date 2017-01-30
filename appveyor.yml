@@ -1,0 +1,12 @@
+environment:
+  my_variable:
+    secure: sdmni9WLS0WyxVQcYtAu1JK2nmuCakjFycgXo5DNGOO11H2dHy5jQv/aVhZUHqWe
+	
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config user.email 'yeswanthkumar_pagadala@student.uml.edu
+  - git config user.name 'yashwanthiit2009
+  - git add target
+  - git commit -m 'hello'
+  - git push origin master 
